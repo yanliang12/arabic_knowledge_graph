@@ -1,7 +1,7 @@
 ######jessica_arabic_knowledge_linking.py#######
 
 import itertools
-from jessica_dbpedia_query import *
+from jessica_dbpedia_query_ar import *
 from yan_ner_arabic import arabic_ner
 from jessica_dbpedia_es_search import search_es_entity
 
