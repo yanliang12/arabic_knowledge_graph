@@ -1,4 +1,4 @@
-#######jessica_dbpedia_query.py#######
+#######jessica_dbpedia_query_ar.py#######
 import re
 import time
 import rdflib
@@ -231,4 +231,4 @@ output_triplets, entity_type_lookup, entity_name_lookup, relation_name_lookup = 
 for t in output_triplets:
 	print(t)
 '''
-#######jessica_dbpedia_query.py#######
+#######jessica_dbpedia_query_ar.py#######
