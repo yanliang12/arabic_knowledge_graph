@@ -8,7 +8,7 @@ from flask_restplus import *
 
 from jessica_arabic_knowledge_linking import arabic_text_knowledge_linking
 
-ns = Namespace('JessKnowLik', description='Jessica\'s Arabic Text to Knowledge Graph Engine. I am open for a DS/AI job, contact me by gaoyuanliang@outlook.com')
+ns = Namespace('knowledge_graph')
 args = argsparser.prepare_args()
 
 parser = ns.parser()
@@ -18,13 +18,13 @@ parser.add_argument('text', type=str, location='json')
 req_fields = {\
 	'text': fields.String()\
 	}
-jessica_api_req = ns.model('JessKnowLik', req_fields)
+jessica_api_req = ns.model('input', req_fields)
 
 rsp_fields = {\
 	'status':fields.String,\
 	'running_time':fields.Float\
 	}
-jessica_api_rsp = ns.model('JessKnowLik', rsp_fields)
+jessica_api_rsp = ns.model('output', rsp_fields)
 
 @ns.route('/text')
 class jessica_api(Resource):
